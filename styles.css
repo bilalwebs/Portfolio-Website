@@ -55,6 +55,15 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
+.logo {
+  font-size: 30px;
+  font-family: 'Courier New', monospace;
+  color: white; /* brackets ka color */
+}
+
+.logo span {
+  color: #ff004f; /* sirf name ka color */
+}
 /* header text */
 .header-text {
   margin-top: 20%;
@@ -65,9 +74,18 @@ nav ul li a:hover::after {
   font-size: 60px;
   margin-top: 20px;
 }
+.header-text h3 {
+  font-size: 24px;
+  margin-top: 10px;
+}
 
 .header-text h1 span {
   color: #ff004f;
+}
+.header-text .description {
+  max-width: 58%;
+  font-size: 20px;
+  margin-top: 20px;
 }
 /* About */
 #about {
@@ -304,7 +322,8 @@ nav ul li a:hover::after {
 .contact-right form {
   width: 100%;
 }
-form input,form textarea{
+form input,
+form textarea {
   width: 100%;
   border: 0;
   outline: none;
@@ -315,9 +334,21 @@ form input,form textarea{
   font-size: 18px;
   border-radius: 6px;
 }
-form .btn2{
+form .btn2 {
   margin-top: 20px;
   font-size: 18px;
   padding: 14px 60px;
   cursor: pointer;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  color: #262626;
+  padding: 25px 0;
+  margin-top: 20px;
+  font-weight: 300;
+}
+.copyright i {
+  color: #ff004f;
 }
