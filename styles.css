@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins" */
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   background: #080808;
@@ -57,7 +61,7 @@ nav ul li a:hover::after {
 
 .logo {
   font-size: 30px;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   color: white; /* brackets ka color */
 }
 
@@ -66,7 +70,7 @@ nav ul li a:hover::after {
 }
 /* header text */
 .header-text {
-  margin-top: 20%;
+  margin-top: 15%;
   font-size: 30px;
 }
 
@@ -83,9 +87,10 @@ nav ul li a:hover::after {
   color: #ff004f;
 }
 .header-text .description {
-  max-width: 58%;
-  font-size: 20px;
+  max-width: 600px;
+  font-size: 18px;
   margin-top: 20px;
+  line-height: 1.6;
 }
 /* About */
 #about {
@@ -351,4 +356,81 @@ form .btn2 {
 }
 .copyright i {
   color: #ff004f;
+}
+
+/* css for small screen */
+nav .fas {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  #header {
+    background: image("./images/phone-background.png");
+  }
+  .header-text {
+    margin-top: 50%;
+    width: 100%;
+    font-size: 16px;
+    padding: 0px 20px;
+  }
+  .header-text h1 {
+    font-size: 32px;
+  }
+  .header-text h3 {
+    font-size: 16px;
+  }
+  .header-text .description {
+    margin-top: 3px;
+    font-size: 14px;
+    max-width: 100%;
+  }
+  nav .fas {
+    display: block;
+    font-size: 25px;
+  }
+  nav ul {
+    position: fixed;
+    top: 0;
+    /* right: 0; */
+    right: -200px;
+    background-color: #ff004f;
+    width: 200px;
+    height: 200vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+  nav ul .fas {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+  .sub-title {
+    font-size: 20px;
+  }
+  .about-col-1,
+  .about-col-2 {
+    flex-basis: 100%;
+  }
+  .about-col-1 {
+    margin-bottom: 30px;
+  }
+  .about-col-2 {
+    font-size: 14px;
+  }
+  .tab-links {
+    margin-right: 20px;
+    font-size: 16px;
+  }
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+  }
+  .copyright {
+    font-size: 14px;
+  }
 }
