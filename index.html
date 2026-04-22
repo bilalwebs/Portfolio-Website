@@ -3,38 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Website</title>
+    <title>Bilal Hussain | Portfolio</title>
+
     <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
+
+    <!-- JS -->
+    <script src="app.js" defer></script>
   </head>
+
   <body>
     <!-- Header -->
-    <div id="header">
+    <header id="header">
       <div class="container">
-        <!-- navbar  -->
         <nav>
           <h2 class="logo">&lt;<span>BilalHussain</span>/&gt;</h2>
+
           <ul id="sidemenu">
             <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
-            <i class="fas fa-times" onclick="closemenu()"></i>
+
+            <!-- CLOSE ICON -->
+            <i class="fas fa-times" id="closeMenu"></i>
           </ul>
-          <i class="fas fa-bars" onclick="openmenu()"></i>
+
+          <!-- OPEN ICON -->
+          <i class="fas fa-bars" id="openMenu"></i>
         </nav>
-        <!-- Header text -->
+
         <div class="header-text">
           <p>UI/UX Designer & Frontend Developer</p>
-          <h1>Hi, I'm <span>Bilal Hussain</span><br /></h1>
+          <h1>Hi, I'm <span>Bilal Hussain</span></h1>
           <h3 class="sub-title">
             Crafting Beautiful & User-Friendly Experiences
           </h3>
@@ -44,13 +51,14 @@
           </p>
         </div>
       </div>
-    </div>
-    <!-- About us -->
-    <div id="about">
+    </header>
+
+    <!-- About -->
+    <section id="about">
       <div class="container">
         <div class="row">
           <div class="about-col-1">
-            <img src="./images/user.png" alt="User Image" />
+            <img src="./images/user.png" alt="Bilal Hussain Profile Picture" />
           </div>
 
           <div class="about-col-2">
@@ -58,53 +66,41 @@
 
             <p>
               I'm a passionate UI/UX Designer and Frontend Developer who enjoys
-              building modern, responsive, and user-friendly websites. I love
-              turning ideas into real digital experiences and continuously
-              improving my skills through real projects.
+              building modern, responsive, and user-friendly websites.
             </p>
 
             <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">
-                Skills
-              </p>
-              <p class="tab-links" onclick="opentab('experience')">
-                Experience
-              </p>
-              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <p class="tab-links active-link" data-tab="skills">Skills</p>
+              <p class="tab-links" data-tab="experience">Experience</p>
+              <p class="tab-links" data-tab="education">Education</p>
             </div>
 
             <div class="tab-contents active-tab" id="skills">
               <ul>
-                <li><span>UI/UX</span><br />Designing Web & App Interfaces</li>
+                <li><span>UI/UX</span><br />Designing Interfaces</li>
                 <li><span>Frontend</span><br />HTML, CSS, JavaScript</li>
-                <li><span>React</span><br />Currently Learning</li>
+                <li><span>React</span><br />Learning</li>
               </ul>
             </div>
 
             <div class="tab-contents" id="experience">
               <ul>
-                <li>
-                  <span>2025 - Present</span><br />Working on personal projects
-                </li>
-                <li>
-                  <span>Learning Phase</span><br />Frontend & UI/UX practice
-                </li>
+                <li><span>2025 - Present</span><br />Personal Projects</li>
               </ul>
             </div>
 
             <div class="tab-contents" id="education">
               <ul>
-                <li><span>BSSE</span><br />Software Engineering Student</li>
-                <li><span>Self Learning</span><br />Web Development & UI/UX</li>
+                <li><span>BSSE</span><br />Software Engineering</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Service -->
-    <div id="services">
+    <!-- Services -->
+    <section id="services">
       <div class="container">
         <h1 class="sub-title">My Services</h1>
 
@@ -112,131 +108,83 @@
           <div>
             <i class="fa-solid fa-palette"></i>
             <h2>UI/UX Design</h2>
-            <p>
-              I design clean and modern user interfaces that improve user
-              experience and make websites easy to use.
-            </p>
-            <a href="#">Learn More</a>
+            <p>Modern and user-friendly interface design.</p>
           </div>
 
           <div>
             <i class="fa-solid fa-code"></i>
             <h2>Frontend Development</h2>
-            <p>
-              I build responsive websites using HTML, CSS, and JavaScript that
-              work on all devices.
-            </p>
-            <a href="#">Learn More</a>
+            <p>Responsive websites using HTML, CSS & JS.</p>
           </div>
 
           <div>
             <i class="fa-solid fa-mobile-screen"></i>
             <h2>Responsive Design</h2>
-            <p>
-              I ensure websites look perfect on mobile, tablet, and desktop
-              screens.
-            </p>
-            <a href="#">Learn More</a>
+            <p>Mobile, tablet & desktop optimized layouts.</p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Portfolio -->
-    <div id="portfolio">
+    <section id="portfolio">
       <div class="container">
         <h1 class="sub-title">My Work</h1>
 
         <div class="work-list">
           <div class="work">
-            <img src="./images/work-1.png" alt="Social App" />
-            <div class="layer">
-              <h3>Social Media App UI</h3>
-              <p>
-                Designed a modern social media interface focusing on user
-                engagement and smooth experience.
-              </p>
-              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-            </div>
+            <img src="./images/work-1.png" alt="Social Media App UI" />
           </div>
 
           <div class="work">
-            <img src="./images/work-2.png" alt="Music App" />
-            <div class="layer">
-              <h3>Music Streaming App</h3>
-              <p>
-                Created a clean and intuitive music player UI with easy
-                navigation and smooth controls.
-              </p>
-              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-            </div>
+            <img src="./images/work-2.png" alt="Music App UI" />
           </div>
 
           <div class="work">
-            <img src="./images/work-3.png" alt="E-commerce App" />
-            <div class="layer">
-              <h3>E-Commerce App Design</h3>
-              <p>
-                Designed a responsive shopping app UI focused on user-friendly
-                product browsing and checkout flow.
-              </p>
-              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-            </div>
+            <img src="./images/work-3.png" alt="E-commerce App UI" />
           </div>
         </div>
-
-        <a href="#" class="btn">See more</a>
       </div>
-    </div>
+    </section>
 
-    <!-- contact -->
-    <div id="contact">
+    <!-- Contact -->
+    <section id="contact">
       <div class="container">
         <div class="row">
           <div class="contact-left">
             <h1 class="sub-title">Contact Me</h1>
 
             <p><i class="fas fa-paper-plane"></i> bilalhussain@gmail.com</p>
-            <p><i class="fas fa-phone-square-alt"></i> +92 331 5637363</p>
+            <p><i class="fas fa-phone"></i> +92 331 5637363</p>
             <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
-
-            <div class="social-icons">
-              <a href="#"><i class="fab fa-facebook"></i></a>
-              <a href="#"><i class="fab fa-twitter-square"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-            </div>
-
-            <a href="./images/my-cv.pdf" class="btn btn2" download>
-              Download CV
-            </a>
           </div>
 
           <div class="contact-right">
-            <form>
-              <input type="text" name="name" placeholder="Your Name" required />
-
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
               <input
                 type="email"
-                name="email"
+                name="Email"
                 placeholder="Your Email"
                 required
               />
-
               <textarea
-                name="message"
+                name="Message"
                 rows="6"
                 placeholder="Your Message"
               ></textarea>
 
               <button type="submit" class="btn btn2">Send Message</button>
             </form>
+
+            <span id="msg"></span>
           </div>
         </div>
       </div>
-      <div class="copyright">
-        <p>© 2026 Bilal Hussain | Designed & Developed with ❤️</p>
-      </div>
-    </div>
+
+      <footer class="copyright">
+        <p>© 2026 Bilal Hussain | All Rights Reserved</p>
+      </footer>
+    </section>
   </body>
 </html>
